@@ -1,0 +1,83 @@
+.blog {
+  background-color: #fafafa;
+
+  &-grid {
+    max-width: 114rem;
+    margin: 7rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+
+    @include respond(tab-m) {
+      max-width: 90rem;
+    }
+
+    @include respond(tab-s) {
+      max-width: 63.5rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__post {
+    background-color: white;
+
+    img {
+      height: 30rem;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    .blog__text {
+      padding: 1.6rem 2.5rem 2.5rem;
+
+      .header-3 {
+        margin: 1.6rem 0;
+      }
+    }
+  }
+
+  &__read {
+    display: flex;
+
+    .icon {
+      display: inline-block;
+      margin-left: auto;
+      color: #cccccc;
+      cursor: pointer;
+
+      .comments-number {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.not-active {
+  display: none !important;
+}
+
+.page-num {
+  margin: 5rem auto 0;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(7, -webkit-max-content);
+  grid-template-columns: repeat(7, max-content);
+  grid-gap: 1rem;
+  .box {
+    color: #c8a97e;
+    border: 1px solid #c8a97e;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+
+    &.box-active {
+      color: white;
+      background: #c8a97e;
+    }
+  }
+}

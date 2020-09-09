@@ -1,0 +1,41 @@
+.services {
+  text-align: center;
+  background-color: #fafafa;
+
+  .service-grid {
+    margin: 5rem auto 0;
+    max-width: 114rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+}
+.service__icon {
+  font-size: 5.5rem;
+  color: #c8a97e;
+  margin-bottom: 3rem;
+}
+
+/////////////////////////
+//meida
+@include respond(tab-m) {
+  .services {
+    .service-grid {
+      max-width: 90rem;
+    }
+  }
+}
+@include respond(tab-s) {
+  .services {
+    .service-grid {
+      max-width: 67.5rem;
+      margin: 5rem auto 0;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+      padding: 1rem 6rem;
+    }
+  }
+}

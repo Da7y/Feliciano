@@ -1,0 +1,131 @@
+.footer {
+  background-color: rgb(20, 19, 19);
+  padding: 8.5rem;
+
+  //display grid
+  &__warper {
+    max-width: 114rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__grid {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    margin-bottom: 4rem;
+  }
+
+  .contact-us {
+    &__icon {
+      text-align: center;
+      width: 4rem;
+      color: white;
+      margin-right: 1rem;
+      font-size: 1.7rem;
+      cursor: pointer;
+      border: none;
+      margin-right: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 50%;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .open-hours {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      .footer__text {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.gallary {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.newsletter {
+  .footer__input {
+    width: 100%;
+    height: 5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+    outline: none;
+    font-size: 1.6rem;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      font-size: 1.6rem;
+    }
+  }
+
+  .btn--footer {
+    width: 100%;
+    height: 5rem;
+
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(200, 169, 126);
+    border: 1px solid rgb(200, 169, 126);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.copy {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@include respond(tab-m) {
+  .footer {
+    &__warper {
+      max-width: 90rem;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include respond(tab-s) {
+  .footer {
+    &__warper {
+      max-width: 63.5rem;
+
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

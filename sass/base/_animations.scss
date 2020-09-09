@@ -1,0 +1,46 @@
+@-webkit-keyframes move-up {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes move-down {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

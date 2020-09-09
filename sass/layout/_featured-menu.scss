@@ -1,0 +1,108 @@
+.featured-menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(-webkit-min-content, -webkit-max-content)
+  );
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-gap: 2rem;
+  justify-content: space-evenly;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: -21rem;
+  z-index: 200;
+
+  .plate {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+
+    // add transition: ;
+
+    &__img {
+      height: 9rem;
+      width: 9rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+
+      &--2 img {
+        transform: translateX(-2rem);
+      }
+
+      &--3 img {
+        transform: translateX(-1.5rem);
+      }
+
+      &--4 img {
+        transform: translateX(-0.7rem);
+      }
+    }
+
+    &__name {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: white;
+    }
+
+    &__recipe {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .plate--1 {
+    -webkit-animation: move-up 0.5s ease-out 0.1s;
+    animation: move-up 0.5s ease-out 0.1s;
+  }
+
+  .plate--2 {
+    -webkit-animation: move-up 0.5s ease-out 0.2s;
+    animation: move-up 0.5s ease-out 0.2s;
+  }
+  .plate--3 {
+    -webkit-animation: move-up 0.5s ease-out 0.3s;
+    animation: move-up 0.5s ease-out 0.3s;
+  }
+  .plate--4 {
+    -webkit-animation: move-up 0.5s ease-out 0.4s;
+    animation: move-up 0.5s ease-out 0.4s;
+  }
+}
+
+@include respond(tab-m) {
+  .featured-menu {
+    max-width: 114rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .plate {
+    &__name {
+      margin-top: 1.2rem;
+      color: #333333 !important;
+    }
+
+    &__recipe {
+      color: #666666 !important;
+    }
+  }
+}
+
+@include respond(tab-s) {
+  .featured-menu {
+    grid-template-columns: repeat(
+      2,
+      minmax(-webkit-min-content, -webkit-max-content)
+    );
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-gap: 5rem;
+  }
+}

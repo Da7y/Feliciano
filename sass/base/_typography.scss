@@ -1,0 +1,75 @@
+.header-1 {
+  color: #c8a97e;
+  font-weight: normal;
+  font-family: "Great Vibes", cursive;
+}
+
+.header-1--slider {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.header-1--main {
+  font-size: 10rem;
+  line-height: 0.4;
+  transform: translateY(2.5rem);
+  text-align: center;
+}
+
+.header-2 {
+  font-weight: normal;
+  font-family: "Poppins", Arial, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+.header-2--light {
+  line-height: 1.5;
+
+  font-size: 6rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-2--black {
+  position: relative;
+  z-index: 2;
+
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+//h3
+.header-3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: black;
+
+  &__service {
+    margin-bottom: 2rem;
+  }
+
+  &__menu {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+//text main
+.text--main {
+  line-height: 1.8;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 1.6rem;
+}
+
+.footer__text {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0px;
+  margin-bottom: 1.6rem;
+}

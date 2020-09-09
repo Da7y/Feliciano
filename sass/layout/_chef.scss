@@ -1,0 +1,74 @@
+.our-chef {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  .chef {
+    margin-top: 5rem;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+    &__grid {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-row-gap: 2.5rem;
+
+      img {
+        width: 100%;
+        height: 38.5rem;
+        object-fit: cover;
+      }
+    }
+
+    &__icon {
+      color: rgb(200, 169, 126);
+      margin-right: 1rem;
+      font-size: 1.7rem;
+      cursor: pointer;
+      border: none;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+/////////////////////
+//media
+@include respond(tab-m) {
+  .our-chef {
+    max-width: 90rem;
+
+    .chef {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4rem;
+    }
+  }
+}
+
+@include respond(tab-s) {
+  .our-chef {
+    max-width: 67.5rem;
+
+    .chef {
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
+
+      &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-row-gap: 2.5rem;
+
+        img {
+          width: 100%;
+          height: 38.5rem;
+
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
